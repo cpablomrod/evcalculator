@@ -296,7 +296,7 @@ export default function CalculatorPage() {
             <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-2xl mb-2">
               Results
             </h1>
-            <p className="text-xl text-white/90 drop-shadow-lg">{vehicleInfo.vehicleName}</p>
+            <p className="text-4xl md:text-5xl font-bold text-white drop-shadow-2xl">{vehicleInfo.vehicleName}</p>
             
             {/* Export PDF Button */}
             <div className="mt-6">
