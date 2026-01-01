@@ -178,7 +178,7 @@ export default function CalculatorPage() {
     doc.text(`Insurance: \u20ac ${formatDecimal(parseFloat(annualExpenses.evInsurance))}`, 20, 102);
     doc.text(`Taxes: \u20ac ${formatDecimal(parseFloat(annualExpenses.evTaxes))}`, 20, 109);
     doc.text(`Maintenance: \u20ac ${formatDecimal(parseFloat(annualExpenses.evMaintenance))}`, 20, 116);
-    doc.setFont(undefined, 'bold');
+    doc.setFont('helvetica', 'bold');
     doc.text(`Total per Year: \u20ac ${formatDecimal(yearlyEVCost)}`, 20, 126);
     
     doc.setFontSize(16);
@@ -187,23 +187,23 @@ export default function CalculatorPage() {
     
     doc.setFontSize(11);
     doc.setTextColor(40, 40, 40);
-    doc.setFont(undefined, 'normal');
+    doc.setFont('helvetica', 'normal');
     doc.text(`Fuel: \u20ac ${formatDecimal(yearlyCombustionFuel)}`, 110, 95);
     doc.text(`Insurance: \u20ac ${formatDecimal(parseFloat(annualExpenses.combustionInsurance))}`, 110, 102);
     doc.text(`Taxes: \u20ac ${formatDecimal(parseFloat(annualExpenses.combustionTaxes))}`, 110, 109);
     doc.text(`Maintenance: \u20ac ${formatDecimal(parseFloat(annualExpenses.combustionMaintenance))}`, 110, 116);
-    doc.setFont(undefined, 'bold');
+    doc.setFont('helvetica', 'bold');
     doc.text(`Total per Year: \u20ac ${formatDecimal(yearlyCombustionCost)}`, 110, 126);
     
     // Free Charging Scenario
     doc.setFontSize(16);
     doc.setTextColor(0, 100, 200);
-    doc.setFont(undefined, 'bold');
+    doc.setFont('helvetica', 'bold');
     doc.text('With Free Charging Stations', 20, 145);
     
     doc.setFontSize(10);
     doc.setTextColor(40, 40, 40);
-    doc.setFont(undefined, 'normal');
+    doc.setFont('helvetica', 'normal');
     doc.text('Using free charging for daily driving, only paying for holidays:', 20, 153);
     
     doc.setFontSize(11);
@@ -216,7 +216,7 @@ export default function CalculatorPage() {
     // 10-Year Comparison Table
     doc.setFontSize(16);
     doc.setTextColor(40, 40, 40);
-    doc.setFont(undefined, 'bold');
+    doc.setFont('helvetica', 'bold');
     doc.text('10-Year Cumulative Cost Comparison', 20, 210);
     
     const tableData = yearlyComparison.map((item) => {
@@ -249,11 +249,11 @@ export default function CalculatorPage() {
     const finalY = (doc as any).lastAutoTable.finalY || 150;
     doc.setFontSize(12);
     doc.setTextColor(40, 40, 40);
-    doc.setFont(undefined, 'bold');
+    doc.setFont('helvetica', 'bold');
     doc.text('Additional Information', 20, finalY + 15);
     
     doc.setFontSize(10);
-    doc.setFont(undefined, 'normal');
+    doc.setFont('helvetica', 'normal');
     doc.text(`Annual distance driven: ${formatNumber(yearlyDistance)} km`, 20, finalY + 23);
     doc.text('These calculations are estimates based on your input', 20, finalY + 30);
     
