@@ -236,12 +236,12 @@ export default function CalculatorPage() {
       theme: 'grid',
       headStyles: { fillColor: [41, 128, 185], textColor: 255, fontStyle: 'bold' },
       styles: { fontSize: 10 },
-      columnStyles: {
-        3: { textColor: (rowIndex: number) => {
-          const item = yearlyComparison[rowIndex];
+      didParseCell: (data: any) => {
+        if (data.section === 'body' && data.column.index === 3) {
+          const item = yearlyComparison[data.row.index];
           const savings = item.combustionCumulative - item.evTotal;
-          return savings > 0 ? [0, 128, 0] : [255, 140, 0];
-        }}
+          data.cell.styles.textColor = savings > 0 ? [0, 128, 0] : [255, 140, 0];
+        }
       }
     });
     
